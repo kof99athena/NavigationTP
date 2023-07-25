@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grahp"
+    app:startDestination="@id/webviewActivity">
+
+    <activity
+        android:id="@+id/webviewActivity2"
+        android:name="com.athena.navigationtp.WebviewActivity"
+        android:label="activity_webview"
+        tools:layout="@layout/activity_webview" />
+    <navigation android:id="@+id/navigation2"
+        app:startDestination="@id/mainActivity">
+        <activity
+            android:id="@+id/mainActivity"
+            android:name="com.athena.navigationtp.MainActivity"
+            android:label="activity_main"
+            tools:layout="@layout/activity_main" />
+        <action
+            android:id="@+id/action_global_webviewActivity2"
+            app:destination="@id/webviewActivity2" />
+    </navigation>
+</navigation>
